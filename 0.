@@ -1,0 +1,39 @@
+/**
+ * struct kid - Represents information about a kid.
+ * @name: The name of the kid.
+ * @age: The age of the kid.
+ * @hobby: The hobby of the kid.
+ */
+struct kid {
+    char *name;
+    int age;
+    char *hobby;
+};
+
+/**
+ * print_kid - Print information about a kid.
+ * @k: Pointer to the kid struct.
+ */
+void print_kid(const struct kid *k)
+{
+    if (k) {
+        printf("Name: %s\n", k->name);
+        printf("Age: %d\n", k->age);
+        printf("Hobby: %s\n", k->hobby);
+    }
+}
+
+/**
+ * main - Entry point of the program.
+ *
+ * Return: Always 0 (success).
+ */
+int main(void)
+{
+    struct kid my_kid = {"Alice", 8, "Drawing"};
+
+    print_kid(&my_kid);
+
+    return 0;
+}
+
