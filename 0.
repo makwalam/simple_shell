@@ -2,12 +2,12 @@
  * struct kid - Represents information about a kid.
  * @name: The name of the kid.
  * @age: The age of the kid.
- * @hobby: The hobby of the kid.
+ * @gender: The gender of the kid.
  */
 struct kid {
     char *name;
     int age;
-    char *hobby;
+    char *gender;
 };
 
 /**
@@ -19,7 +19,7 @@ void print_kid(const struct kid *k)
     if (k) {
         printf("Name: %s\n", k->name);
         printf("Age: %d\n", k->age);
-        printf("Hobby: %s\n", k->hobby);
+        printf("Gender: %s\n", k->gender);
     }
 }
 
@@ -30,10 +30,9 @@ void print_kid(const struct kid *k)
  */
 int main(void)
 {
-    struct kid my_kid = {"Alice", 8, "Drawing"};
+    struct kid my_kid = {"Arthur", 14, "male"};
 
     print_kid(&my_kid);
 
     return 0;
 }
-
