@@ -5,28 +5,41 @@
  * @hobby: The hobby of the kid.
  * @height: The height of the kid.
  */
+
 #include <stdio.h>
 
 struct kid {
-    char *name;
-    int age;
-    char *hobby;
-    float height;
+	char *name;
+	int age;
+	char *hobby;
+	float height;
 };
 
-void print_kid(const struct kid *k) {
-    if (k) {
-        printf("Name: %s\n", k->name);
-        printf("Age: %d\n", k->age);
-        printf("Hobby: %s\n", k->hobby);
-        printf("Height: %.2f\n", k->height);
-    }
+/**
+ * print_kid - Prints information about a kid.
+ * @k: Pointer to the kid structure to be printed.
+ */
+void print_kid(const struct kid *k)
+{
+	if (k)
+	{
+		printf("Name: %s\n", k->name);
+		printf("Age: %d\n", k->age);
+		printf("Hobby: %s\n", k->hobby);
+		printf("Height: %.2f\n", k->height);
+	}
 }
 
-int main(void) {
-    struct kid my_kid = {"Alice", 8, "Drawing", 1.30};
-    print_kid(&my_kid);
+/**
+ * main - Entry point of the program.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	struct kid my_kid = {"Alice", 8, "Drawing", 1.30};
 
-    return 0;
+	print_kid(&my_kid);
+
+	return (0);
 }
-
