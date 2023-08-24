@@ -1,45 +1,32 @@
-/**
- * struct kid - Represents information about a kid.
- * @name: The name of the kid.
- * @age: The age of the kid.
- * @hobby: The hobby of the kid.
- * @height: The height of the kid.
- */
-
 #include <stdio.h>
 
-struct kid {
-	char *name;
-	int age;
-	char *hobby;
-	float height;
-};
-
 /**
- * print_kid - Prints information about a kid.
- * @k: Pointer to the kid structure to be printed.
+ * _print_string - Prints a string followed by a newline
+ * @str: The input string to print
+ *
+ * Return: None
  */
-void print_kid(const struct kid *k)
+void _print_string(const char *str)
 {
-	if (k)
+	int i = 0;
+
+	while (str[i] != '\0')
 	{
-		printf("Name: %s\n", k->name);
-		printf("Age: %d\n", k->age);
-		printf("Hobby: %s\n", k->hobby);
-		printf("Height: %.2f\n", k->height);
+		putchar(str[i]);
+		i++;
 	}
+	putchar('\n');
 }
 
 /**
- * main - Entry point of the program.
+ * main - Entry point of the program
  *
- * Return: Always 0.
+ * Return: 0 on success
  */
 int main(void)
 {
-	struct kid my_kid = {"Alice", 8, "Drawing", 1.30};
-
-	print_kid(&my_kid);
-
+	const char *message = "Hello, Betty!";
+	
+	_print_string(message);
 	return (0);
 }
